@@ -3,9 +3,6 @@ from django.shortcuts import render
 
 def index(request):
     context = {
-        "breadcrumb":
-            {
-                "parent": "Color Version", "child": "Layout Light"
-            }
+        "title": "Dashboard",
     }
-    return render(request, 'app/index.html',context)
+    return render(request, 'app/index.html', context)

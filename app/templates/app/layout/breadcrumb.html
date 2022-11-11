@@ -1,17 +1,20 @@
 {% load static %}
 {% load sass_tags %}
 <div class="container-fluid">
-  <div class="page-header">
-    <div class="row">
-      <div class="col-lg-6">
-        <h3>Layout</h3>
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="/app/static">Home</a></li>
-          <li class="breadcrumb-item">{{breadcrumb.parent}}</li>
-          <li class="breadcrumb-item active">{{breadcrumb.child}}</li>
-        </ol>
-      </div>
+    <div class="page-header">
+        <div class="row">
+            <div class="col-lg-6">
+                <h3>{{ title }}</h3>
+                <ol class="breadcrumb">
+                    {% if breadcrumb.parent %}
+                    <li class="breadcrumb-item">{{ breadcrumb.parent }}</li>
+                    {% endif %}
+                    {% if breadcrumb.child %}
+                    <li class="breadcrumb-item active">{{ breadcrumb.child }}</li>
+                    {% endif %}
+                </ol>
+            </div>
 
+        </div>
     </div>
-  </div>
 </div>

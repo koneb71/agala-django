@@ -38,8 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app',
     'sass_processor',
+    'qr_code',
+    'app',
+    'events',
 ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -134,3 +136,5 @@ SASS_PROCESSOR_ROOT = BASE_DIR / 'static'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+AUTH_USER_MODEL = 'app.AdminUser'
